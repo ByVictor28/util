@@ -1,0 +1,39 @@
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 1.6rem;
+
+}
+// MEDIA QUERIES
+@mixin Smartphone {
+  @media (min-width: 480px) {
+      @content;
+  }
+}
+@mixin Laptop {
+  @media (min-width: 768px) {
+      @content;
+  }
+}
+@mixin Desktop {
+  @media (min-width: 1024px) {
+      @content;
+  }
+}
+
+@mixin flexCenter($justify) {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: $justify;
+}
